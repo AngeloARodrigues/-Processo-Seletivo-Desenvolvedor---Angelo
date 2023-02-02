@@ -1,0 +1,11 @@
+<div >
+    <label>Nome da Fazenda: </label><br>
+            <span>{{farm.name}}<br><br></span>
+            <label>Centroide: </label><br>
+            <span>{{farm.centroid}}<br><br></span>
+            <label>CPF do Dono: </label><br>
+            <span>{{farm.owner_id}}<br><br></span>            
+    <button routerLink="details/{{farm.id}}">Voltar</button>
+    <button routerLink="/edit/{{farm.id}}">Editar</button>
+    <button (click)="deletFarm(farm.id)" routerLink=""> Deletar </button>
+</div>

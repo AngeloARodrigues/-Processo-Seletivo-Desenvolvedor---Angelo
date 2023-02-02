@@ -1,0 +1,28 @@
+<div>
+    <form action="/action_page.php" >
+
+      <label>Propietário(a)</label>
+      <input type="text" id="pname" name="pname" placeholder="ex: João das Neves" [(ngModel)]="owner.name" required>
+
+      <label>Documento</label>
+      <input type="text" id="pdoc" name="pdoc" placeholder="CPF: 000.000.000-00" [(ngModel)]="owner.document" [(ngModel)]="owner.id" [(ngModel)]="farm.owner_id" required>
+
+      <label>Data de Expedição</label>
+      <input type="text" id="pdatadoc" name="pdatadoc" placeholder="Dia/Mês/Ano" [(ngModel)]="owner.creation_date" >
+
+      <label>Nome da Fazenda</label>
+      <input type="text" id="fname" name="fname" placeholder="ex: Fazenda Agua Cristalina" [(ngModel)]="farm.name"  required>
+  
+      <label>Área</label>
+      <input type="text" id="fArea" [(ngModel)]="farm.area" name="fArea" required placeholder="14253m²">
+
+      <label>Marque a área da fazenda no mapa.</label>
+      <button (click)="draw('Circle')" id="drawcircle" style="cursor: pointer;">Desenhar círculo</button>
+      <label for="" [hidden]="circleDrawn"><br>Área não marcada<br></label>
+      <label for="" for="" [hidden]="!circleDrawn"><br>Área  marcada<br></label>
+ 
+      <button (click)="onSubmitbtm()" class="submitInput" type="submit" value="Submeter">Submeter</button>
+    </form>
+    <button routerLink="/farm">Voltar</button>
+  </div>
+

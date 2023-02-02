@@ -1,0 +1,17 @@
+<div>
+    <form action="/action_page.php">  
+        <label>Documento</label><br>
+        <input type="text" id="pdoc" name="pdoc" placeholder="{{farm.owner_id}}" [(ngModel)]="farmOBJ.owner_id" required>
+  
+        <label>Nome da Fazenda</label><br>
+        <input type="text" id="fname" name="fname" placeholder="{{farm.name}}" [(ngModel)]="farmOBJ.name"  required>
+    
+        <label>Área</label>
+        <input type="text" id="fArea" name="fArea"[(ngModel)]="farmOBJ.area"  required placeholder="14253m²">  
+   
+        <br>
+        <button (click)="onSubmitbtm()" class="submitInput">Submeter</button>
+      </form>
+      <button routerLink="/farm">Voltar</button>
+
+</div>

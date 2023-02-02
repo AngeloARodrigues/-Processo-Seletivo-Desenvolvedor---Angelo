@@ -1,0 +1,8 @@
+<div class="sidebar" ng-app="myDashboard" ng-controller="myCtrl">
+    <button routerLink="farm">Cadastrar</button><br>
+    <ul>
+        <li *ngFor="let farm of farms">
+            <a routerLink="details/{{farm.id}}">{{farm.name}}</a><br>
+        </li>
+    </ul>
+</div>
